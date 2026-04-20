@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <math.h>
 
 int main(){
     int N = 0;
@@ -42,7 +43,7 @@ int main(){
             }
 
             if(tempj != -1 && tempk != -1){
-                Array[i] = (tempj + tempk) / 2;
+                Array[i] = floor(((float)(tempj + tempk) / 2));
             } else if(tempj != -1){
                 Array[i] = tempj;
             } else if(tempk != -1){
