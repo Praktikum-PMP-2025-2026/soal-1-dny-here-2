@@ -1,3 +1,12 @@
+/** EL2008 Praktikum Pemecahan Masalah dengan Pemrograman 2024/2025
+ *   Modul               : Data Manipulation and External File
+ *   Hari dan Tanggal    : Senin, 20 April 2026
+ *   Nama (NIM)          : Danny Rahmat Pratama (13224019)
+ *   Nama File           : Soal1.c
+ *   Deskripsi           : Membuat sensor minecraft
+ * 
+ */
+
 #include <stdio.h>
 
 int floor_new(float num){
@@ -21,7 +30,8 @@ int main(){
     scanf("%d", &N);
 
     int Array[N];
-    int maxsum = 0;
+    int maxsum = -9999;
+    int current = -9999;
 
     for (int i = 0; i < N; i++){
         scanf("%d", &Array[i]);
@@ -70,10 +80,20 @@ int main(){
     printf("RECOVERED ");
     for(int i = 0; i < N-1; i++){
         printf("%d ", Array[i]);
-        maxsum += Array[i];
+    }
+
+    for(int i = 0; i < N ; i++){
+        for(int j = i; j < N; j++){
+            current =+ Array[j];
+            if(current > maxsum){
+                printf("%d ", Array[i]);
+                maxsum = current;
+            }
+        }
+        current = -9999; 
     }
     printf("%d\n", Array[N-1]);
-    printf("MAX_SUM %d", maxsum + Array[N-1]);
+    printf("MAX_SUM %d", maxsum);
 
     return 0;
 }
