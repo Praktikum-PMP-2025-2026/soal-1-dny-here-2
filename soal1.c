@@ -86,7 +86,6 @@ int main(){
         for(int j = i; j < N; j++){
             current =+ Array[j];
             if(current > maxsum){
-                printf("%d ", Array[i]);
                 maxsum = current;
             }
         }
