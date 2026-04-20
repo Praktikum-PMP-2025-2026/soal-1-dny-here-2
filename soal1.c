@@ -31,7 +31,7 @@ int main(){
 
     int Array[N];
     int maxsum = -9999;
-    int current = -9999;
+    int current = 0;
 
     for (int i = 0; i < N; i++){
         scanf("%d", &Array[i]);
@@ -84,12 +84,13 @@ int main(){
 
     for(int i = 0; i < N ; i++){
         for(int j = i; j < N; j++){
-            current =+ Array[j];
+            current += Array[j];
             if(current > maxsum){
                 maxsum = current;
             }
         }
-        current = -9999; 
+        
+        current = 0;
     }
     printf("%d\n", Array[N-1]);
     printf("MAX_SUM %d", maxsum);
