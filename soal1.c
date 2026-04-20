@@ -19,7 +19,6 @@ int main(){
         if(Array[i] == -1){
             j = i - 1;
             k = i + 1;
-            printf("%d (Awal)\n", Array[i]);
 
             while(j != -1){
                 if(Array[j] != -1){
@@ -30,8 +29,6 @@ int main(){
                 }
                 j--;
             }
-
-            printf("%d (kiri)\n", tempj);
             
             while(k != N){
                 if(Array[k] != -1){
@@ -44,8 +41,6 @@ int main(){
                 
             }
 
-            printf("%d (kanan)\n", tempk);
-
             if(tempj != -1 && tempk != -1){
                 Array[i] = (tempj + tempk) / 2;
             } else if(tempj != -1){
@@ -55,8 +50,6 @@ int main(){
             } else{
                 Array[i] = 0;
             }
-
-            printf("%d (Hasil)\n", Array[i]);
 
         }
     }
