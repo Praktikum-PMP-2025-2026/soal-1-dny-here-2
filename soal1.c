@@ -1,5 +1,16 @@
 #include <stdio.h>
-#include <math.h>
+
+int floor_new(float num){
+    if(num < 0 && (num - (int)(num) != 0)){
+        num = (int)(num - 1);
+    }
+    if(num > 0){
+        (int)num;
+    } 
+    
+    return num;
+}
+
 
 int main(){
     int N = 0;
@@ -43,7 +54,7 @@ int main(){
             }
 
             if(tempj != -1 && tempk != -1){
-                Array[i] = floor(((float)(tempj + tempk) / 2));
+                Array[i] = floor_new(((float)(tempj + tempk) / 2));
             } else if(tempj != -1){
                 Array[i] = tempj;
             } else if(tempk != -1){
@@ -51,6 +62,7 @@ int main(){
             } else{
                 Array[i] = 0;
             }
+
 
         }
     }
